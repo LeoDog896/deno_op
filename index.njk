@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deno_op</title>
+</head>
+<body>
+    <h1>deno_op</h1>
+    <h2>browsable list of deno internal operations</h2>
+
+    <ul>
+        {% for op in ops %}
+            <li><span>{{op}}</span></li>
+        {% endfor %}
+    </ul>
+
+    <style>
+        ul {
+            column-count: 3;
+            column-gap: 1em;
+            list-style: none;
+        }
+
+        span {
+            padding: 0.5em;
+            border-radius: 0.5em;
+            background-color: #eee;
+        }
+
+        li {
+            margin-bottom: 1.5em;
+        }
+        
+        body {
+            font-family: sans-serif;
+            max-width: 80%
+            margin: 0 auto;
+            padding: 1em;
+        }
+
+        /* make the headers centered */
+        h1, h2 {
+            margin-bottom: 1em;
+            text-align: center;
+        }
+
+        h1 {
+            font-weight: 400;
+        }
+
+        h2 {
+            font-weight: 300;
+        }
+    </style>
+</body>
+</html>

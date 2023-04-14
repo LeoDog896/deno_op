@@ -1,5 +1,11 @@
 {
   "tasks": {
-    "gen": "deno run --allow-write=./data scripts/gen.ts",
+    "gen": "deno run --allow-write=./_data.json scripts/gen.ts",
+    "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
+    "build": "deno task lume",
+    "serve": "deno task lume -s"
+  },
+  "imports": {
+    "lume/": "https://deno.land/x/lume@v1.16.2/"
   }
 }
