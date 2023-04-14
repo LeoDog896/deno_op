@@ -1,0 +1,7 @@
+{
+    "tasks": {
+        "gen": "deno task gen:stable && deno task gen:unstable",
+        "gen:stable": "deno run --allow-write=data/ops.json gen.ts data/ops.json",
+        "gen:unstable": "deno run --unstable --allow-write=data/ops_unstable.json gen.ts data/ops_unstable.json",
+    }
+}
