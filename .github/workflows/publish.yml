@@ -23,7 +23,7 @@ jobs:
           deno-version: v1.x
 
       - name: Grab OPs
-        run: deno task grab
+        run: deno task gen
 
       - name: Build site
         run: deno task build
